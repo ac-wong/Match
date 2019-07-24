@@ -72,24 +72,24 @@ function executeEvent(event) {
      */
 
    // if an invalid click, cancel default action
-    if (checkEvent(event.target.className) == "invalid" || checkEvent(event.target.id) == "invalid") {
+    if (checkEvent(event.target.className) === "invalid" || checkEvent(event.target.id) === "invalid") {
       event.stopPropagation();
       event.preventDefault();
     }
 
     // if the restart button was clicked, restart game
-    else if (checkEvent(event.target.className) == "restart") {
+    else if (checkEvent(event.target.className) === "restart") {
       restartGame();
     }
 
     // if clicked play again on modal, close the modal and restart game
-    else if (checkEvent(event.target.className) == "again") {
+    else if (checkEvent(event.target.className) === "again") {
       closeModal();
       restartGame();
     }
 
     // if clicked close button on modal, close the modal
-    else if (checkEvent(event.target.className) == "close") {
+    else if (checkEvent(event.target.className) === "close") {
       closeModal();
     }
 
@@ -113,7 +113,7 @@ function executeEvent(event) {
        /*
         * if the two cards match
         */
-       if (event.target.innerHTML == openCards[0]) {
+       if (event.target.innerHTML === openCards[0]) {
               processMatch(event);
               updateMatchedPairs(); // call function to update and check number of matched pairs, including display of win modal if applicable
        }
@@ -224,11 +224,11 @@ function executeEvent(event) {
    // function checks and updates star rating display
    let parent = document.getElementsByClassName("stars")[0];
 
-   if (num == 5)  {
+   if (num === 5)  {
      parent.removeChild(parent.lastElementChild);
      rating = 2;
    }
-   else if (num == 10) {
+   else if (num === 10) {
      parent.removeChild(parent.lastElementChild);
      rating = 1;
    }
@@ -251,7 +251,7 @@ function restartGame() {
    last_hr = 0;
 
    // hide hour elements from the page
-   if (hr.style.visibility == "visible") {
+   if (hr.style.visibility === "visible") {
      hr.style.visibility = "hidden";
      hr_divider.style.visibility = "hidden";
    }
@@ -484,7 +484,7 @@ function displayTime(ms) {
   hr.innerText = h;
 
   //unhide hour display if reached one hour
-  if (h == "01") {
+  if (h === "01") {
     hr.style.visibility = "visible";
     hr_divider.style.visibility = "visible";
   }
