@@ -150,6 +150,10 @@ h1 {
     cursor: pointer;
 }
 
+.fa-star {
+    color: #009900;
+}
+
 
 /*
  * animation keyframes for cards
