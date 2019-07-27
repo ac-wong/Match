@@ -281,10 +281,10 @@ h1 {
   left: 50%;
   background-color: #f1f1f1;
   width: 50%;
-  height: 25%;
+  height: 50%;
   min-width: 146.5px;
   margin-left: -25%;
-  margin-top: -12.5%;
+  margin-top: -25%;
   padding: 16px;
   border-radius: 0.5rem;
   display: flex;
@@ -334,6 +334,7 @@ h1 {
   align-self: center;
   text-decoration: underline;
   cursor: pointer;
+  padding-bottom: 20px;
 }
 
 .ratings {
@@ -341,6 +342,7 @@ h1 {
   flex-direction: row;
   list-style: none;
   justify-content: center;
+
 }
 
 .rating {
@@ -363,6 +365,7 @@ h1 {
 /*
  * styles for responsive design on different devices
  */
+
 @media screen and (max-width: 660px) {
   .deck {
     width: 300px;
@@ -387,5 +390,12 @@ h1 {
 
   #timer {
     font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 660px) {
+  .modal-display {
+    height: 37.5%;
+    margin-top: -18.75%;
   }
 }
